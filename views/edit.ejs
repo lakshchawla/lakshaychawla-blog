@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshay Chawla | Write Post</title>
+    <link rel="stylesheet" href="/rough/style.css">
+</head>
+
+<body>
+    <%- include("header")  %>
+
+
+        <div class="PGHEAD">
+            <h1><a href="/">BLOG</a></h1>
+        </div>
+
+        <div class="NPCONTAINER">
+            <form action="/posts/edit/<%= post._id %> " method="POST">
+
+                <input type="text" value="<%= post.title %> " name="Title" placeholder="Blog title" required>
+                <input type="text" value="<%= post.authorName %> " name="AuthorName" placeholder="Author Name" required>
+                <input type="email" value="<%= post.authorEmail %> " name="Email" placeholder="Email" required>
+                <textarea name="BlogPost" placeholder="Write your post here" required id=""><%= post.blogPost %> </textarea>
+                <button type="submit">Publish</button>
+                <a href="/" class="GREYBTNLINK">Cancel</a>
+
+            </form>
+        </div>
+
+</body>
+
+</html>

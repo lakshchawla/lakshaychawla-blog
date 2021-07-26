@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshay Chawla | Blog</title>
+    <link rel="stylesheet" href="/rough/style.css">
+</head>
+
+<body>
+    <%- include("header")  %>
+
+        <div class="BLOGVIEW">
+            <h1>
+                <%= post.title %>
+            </h1>
+
+            <p>
+                <%= post.blogPost %>
+            </p>
+
+            <h4>Author:
+                <a href="mailto:<%= post.authorEmail %> ">
+                    <%= post.authorName %>
+                </a>
+            </h4>
+            <p>Published on: July 22, 2021</p>
+
+            <div class="BLOGLINKS"><a href="/" class="REDBTNLINK">Back to posts</a></div>
+        </div>
+
+</body>
+
+</html>
